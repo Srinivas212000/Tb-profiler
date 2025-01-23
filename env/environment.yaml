@@ -1,0 +1,14 @@
+name: tb-profiler
+channels:
+  -  bioconda
+  -  conda-forge
+  -  defaults
+dependencies:
+  -  tb-profiler
+  -  trimmomatic
+  -  bwa
+  -  samtools
+  -  gatk 
+  -  python>=3.12.8
+  -  bcftools
+  -  snpeff
