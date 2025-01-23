@@ -1,0 +1,22 @@
+samples: 
+  - ERR4423681
+tri_in: "data"
+tri_out: "trim_reads"
+threads: 4
+leading: 3
+trailing: 3
+slidingwindow: "4:20"
+minlen: 36
+map_in: "trim_reads"
+map_refin: "reference"
+map_out: "bam"
+sort_in: "bam"
+sort_out: "bam" 
+index_in: "bam"
+index_out: "bam"
+gatk_in: "bam"
+gatk_refin: "reference"
+gatk_out: "vcf"
+norm_in: "vcf"
+norm_refin: "reference"
+norm_out: "vcf"
