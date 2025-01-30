@@ -49,7 +49,7 @@ rule trimmomatic:
     log:
         "log/{samples}_trim.log"
     conda:
-        "env/environment.yaml"
+        "env/trim.yaml"
     threads: threads
     shell:
         """
@@ -73,7 +73,7 @@ rule mapping:
     log:
         "log/{samples}_mapping.log"
     conda:
-        "env/environment.yaml"
+        "env/bwa.yaml"
     shell:
         """
         set -euo pipefail
@@ -90,7 +90,7 @@ rule sort:
     log:
         "log/{samples}_sort.log"
     conda:
-        "env/environment.yaml"
+        "env/bwa.yaml"
     threads: threads
     shell:
         """
@@ -107,7 +107,7 @@ rule index:
     log:
         "log/{samples}_index.log"
     conda:
-        "env/environment.yaml"
+        "env/bwa.yaml"
     shell:
         """
         set -euo pipefail
@@ -124,7 +124,7 @@ rule gatk:
     log:
         "log/{samples}_gatk.log"
     conda:
-        "env/environment.yaml"
+        "env/gatk.yaml"
     shell:
         """
         set -euo pipefail
@@ -146,7 +146,7 @@ rule norm:
     log:
         "log/{samples}_norm.log"
     conda:
-        "env/environment.yaml"
+        "env/norm.yaml"
     shell:
         """
         set -euo pipefail
